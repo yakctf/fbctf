@@ -16,6 +16,8 @@ $translations = array(
     '立即查看比赛版图并准备开始进行夺旗赛！',
   'Please login here with username and password.' =>
     '请使用用户名和密码登录。',
+  'Or register to use username and password here. Once you have registered, you will be logged in.' =>
+    '如果你已经注册账号，输入账号密码将会直接登陆。',
   'Gameboard' =>
     '比赛版图',
   'Register Team' =>
