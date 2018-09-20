@@ -67,7 +67,7 @@ $translations = array(
   'By participating in the contest, you agree to release Yueanke and its employees, and the hosting organization from any and all liability, claims or actions of any kind whatsoever for injuries, damages or losses to persons and property which may be sustained in connection with the contest. You acknowledge and agree that Yueanke et al is not responsible for technical, hardware or software failures, or other errors or problems which may occur in connection with the contest.' =>
     '当您参与比赛时，您同意放弃任何及所有对月安客 和其员工以及托管组织在竞赛连线期间对人身和财产的任何损失或损害产生的与其相关的任何损害或损失责任的索赔。',
   'If you have any questions about what is or is not allowed, please ask an organizer.' =>
-    '如果您对上述问题有疑虑，请立即向託管组织反映。',
+    '如果您对上述问题有疑虑，请立即向托管组织反映。',
   'Have fun!' =>
     '玩得愉快！',
   'Name' =>
