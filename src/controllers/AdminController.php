@@ -706,7 +706,7 @@ class AdminController extends Controller {
                 <div class="fb-column-container">
                   <div class="col col-pad col-1-4">
                     <div class="form-el el--block-label">
-                      <label>{tr('Yueanke Login')}</label>
+                      <label>{tr('Facebook Login')}</label>
                       <div class="admin-section-toggle radio-inline">
                         <input
                           type="radio"
@@ -729,7 +729,7 @@ class AdminController extends Controller {
                       </div>
                     </div>
                     <div class="form-el el--block-label">
-                      <label>{tr('Yueanke Registration')}</label>
+                      <label>{tr('Facebook Registration')}</label>
                       <div class="admin-section-toggle radio-inline">
                         <input
                           type="radio"
