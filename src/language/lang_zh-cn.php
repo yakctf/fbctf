@@ -14,6 +14,8 @@ $translations = array(
     '欢迎来到月安客夺旗竞赛。立刻点击 "开始" 进入正式的夺旗赛挑战。祝征途愉快。',
   'Get ready for the CTF to start and access the gameboard now!' =>
     '立即查看比赛版图并准备开始进行夺旗赛！',
+  'Please login here with username and password.' =>
+    '请使用用户名和密码登录。',
   'Gameboard' =>
     '比赛版图',
   'Register Team' =>
