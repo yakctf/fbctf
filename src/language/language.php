@@ -12,9 +12,9 @@ async function tr_start(): Awaitable<void> {
       file_exists($document_root."/language/lang_".$language.".php")) {
     include ($document_root."/language/lang_".$language.".php");
   } else {
-    include ($document_root."/language/lang_en.php");
+    include ($document_root."/language/lang_zh-cn.php");
     error_log(
-      "\nWarning: Selected language ({$language}) has no translation file in the languages folder. English (languages/lang_en.php) is used instead.",
+      "\nWarning: Selected language ({$language}) has no translation file in the languages folder. Chinese (languages/lang_zh-cn.php) is used instead.",
     );
   }
   /* HH_IGNORE_ERROR[2049] */
@@ -34,7 +34,7 @@ function tr(string $word): string {
     return $lang[$word];
   } else {
     error_log(
-      "\nWarning: '{$word}' has no translation in the selected language. Using the English version instead.",
+      "\nWarning: '{$word}' has no translation in the selected language. Using the Chinese version instead.",
     );
     return $word;
   }
