@@ -13,9 +13,9 @@ $translations = array(
   'Welcome to the Yueanke Capture the Flag Competition. By clicking "Play," you will be entered into the official CTF challenge. Good luck in your conquest.' =>
     '欢迎来到月安客夺旗竞赛。立刻点击 "开始" 进入正式的夺旗赛挑战。祝征途愉快。',
   'Get ready for the CTF to start and access the gameboard now!' =>
-    '立即查看游戏版图并准备开始进行夺旗赛！',
+    '立即查看比赛版图并准备开始进行夺旗赛！',
   'Gameboard' =>
-    '游戏版图',
+    '比赛版图',
   'Register Team' =>
     '注册队伍',
   'Get ready for the CTF to start and register your team now!' =>
@@ -115,7 +115,7 @@ $translations = array(
   'Window is too small' =>
     '视窗过小',
   'For the best CTF experience, please make window size bigger.' =>
-    '为了体验最佳的夺旗赛游戏，请放大视窗。',
+    '为了体验最佳的夺旗赛比赛，请放大视窗。',
   'Thank you.' =>
     '谢谢。',
   'Logout' =>
@@ -158,7 +158,7 @@ $translations = array(
   'Activity' =>
     '活动',
   'Game Clock' =>
-    '游戏时间',
+    '比赛时间',
   //Translations for AdminController
   'Auto' =>
     '自动',
@@ -168,6 +168,10 @@ $translations = array(
     '开放式',
   'Tokenized' =>
     '邀请式',
+  'Integration' =>
+    '整合',
+  'Game Schedule' =>
+    '比赛时间表',
   'Hour' =>
     '小时',
   'Hours' =>
@@ -183,7 +187,7 @@ $translations = array(
   'Create More' =>
     '建立更多',
   'Export Available' =>
-    '汇出可用',
+    '导出可用',
   'Not started yet' =>
     '尚未开始',
   'Configuration' =>
@@ -191,7 +195,7 @@ $translations = array(
   'Tokens' =>
     '邀请码',
   'Game Configuration' =>
-    '游戏设定',
+    '比赛设定',
   'OK' =>
     '正常',
   'status_' =>
@@ -201,7 +205,7 @@ $translations = array(
   'Off' =>
     '关',
   'Player Names' =>
-    '玩家名称',
+    '选手名称',
   'Players Per Team' =>
     '各队人数',
   'Registration Type' =>
@@ -211,7 +215,7 @@ $translations = array(
   'Team Selection' =>
     '队伍选择',
   'Game' =>
-    '游戏',
+    '比赛',
   'Scoring' =>
     '记分板',
   'Progressive Cycle (s)' =>
@@ -229,7 +233,7 @@ $translations = array(
   'Server Time' =>
     '服务器时间',
   'Game Duration' =>
-    '游戏时间',
+    '比赛时间',
   'Begin Time' =>
     '开始时间',
   'Expected End Time' =>
@@ -251,7 +255,7 @@ $translations = array(
   'No Announcements' =>
     '无公告',
   'Game Controls' =>
-    '游戏控制',
+    '比赛控制',
   'Write New Announcement here' =>
     '在此新增公告',
   'Create' =>
@@ -261,9 +265,9 @@ $translations = array(
   'Back Up Database' =>
     '资料库备份',
   'Export Full Game' =>
-    '导出游戏进度',
+    '导出比赛进度',
   'Import Full Game' =>
-    '导入游戏进度',
+    '导入比赛进度',
   'Import Teams' =>
     '导入队伍资讯',
   'Export Teams' =>
@@ -477,15 +481,15 @@ $translations = array(
   'No Entries' =>
     '无任何项目',
   'Game Logs' =>
-    '游戏记录',
+    '比赛记录',
   'Game Logs Timeline' =>
-    '游戏记录时间轴',
+    '比赛记录时间轴',
   'End Game' =>
-    '结束游戏',
+    '结束比赛',
   'Begin Game' =>
-    '开始游戏',
+    '开始比赛',
   'Game Admin' =>
-    '游戏管理员',
+    '比赛管理员',
   'Controls' =>
     '控制',
   'Quiz' =>
@@ -556,11 +560,11 @@ $translations = array(
   'begin_' =>
     '开始_',
   'Are you sure you want to kick off the game? Logs will be cleared and progressive scoreboard will start' =>
-    '你确定要开始游戏了吗？记录将会被清空且记分板将会开始记录。',
+    '你确定要开始比赛了吗？记录将会被清空且记分板将会开始记录。',
   'end_' =>
     '结束_',
   'Are you sure you want to finish the current game?' =>
-    '你确定要立即结束现在的游戏？',
+    '你确定要立即结束现在的比赛？',
   'Are you sure you want to logout from the game?' =>
     '你确定要立即登出？',
   'Saved' =>
@@ -630,13 +634,13 @@ $translations = array(
   'total_pts' =>
     '总_得分',
   'Tool bars are located on all edges of the gameboard. Tap a category to expand and close each tool bar.' =>
-    '工具列位落于游戏版图的四周。点击任一分类以展开或关闭各工具列。',
+    '工具列位落于比赛版图的四周。点击任一分类以展开或关闭各工具列。',
   'Tool_Bars' =>
     '工具_列',
   'Tap the "Game Clock" to keep track of time during gameplay. Don’t let time get the best of you.' =>
-    '点击 "游戏时间" 以随时追踪剩余时间。别败给时间了。',
+    '点击 "比赛时间" 以随时追踪剩余时间。别败给时间了。',
   'Game_Clock' =>
-    '游戏_时间',
+    '比赛_时间',
   'Countries marked with an ' =>
     '有着',
   'are captured by you.' =>
@@ -656,13 +660,13 @@ $translations = array(
   'Command_Line' =>
     '指令_行',
   'Click "Nav" to access main navigation links like Rules of Play, Registration, Blog, Jobs & more.' =>
-    '点击 "导航" 以获取更多资讯，例如： 游戏规则、注册、博客、工作或更多。',
+    '点击 "导航" 以获取更多资讯，例如： 比赛规则、注册、博客、工作或更多。',
   'Track your competition by clicking "scoreboard" to access real-time game statistics and graphs.' =>
-    '点击 "记分板" 以追踪你目前游戏的进度，并查看即时的统计资料与图形。',
+    '点击 "记分板" 以追踪你目前比赛的进度，并查看即时的统计资料与图形。',
   'Have fun, be the best and conquer the world.' =>
     '成为最棒的征服者吧，祝愉快。',
   'Game_On' =>
-    '游戏_开始',
+    '比赛_开始',
   'tutorial_' =>
     '教学_',
   'Next' =>
