@@ -40,10 +40,10 @@ class IndexController extends Controller {
 
   public function renderMainContent(): :xhp {
     $custom_org = \HH\Asio\join(Configuration::gen('custom_org'));
-    if ($custom_org->getValue() === 'YUEANKE') {
+    if ($custom_org->getValue() === 'Yueanke') {
       $welcome_msg =
         tr(
-          'Welcome to the YUEANKE Capture the Flag Competition. By clicking "Play," you will be entered into the official CTF challenge. Good luck in your conquest.',
+          'Welcome to the Yueanke Capture the Flag Competition. By clicking "Play," you will be entered into the official CTF challenge. Good luck in your conquest.',
         );
     } else {
       $welcome_msg =
@@ -266,7 +266,7 @@ class IndexController extends Controller {
               <div class="rule-main">
                 <p>
                   {tr(
-                    'By participating in the contest, you agree to release YUEANKE and its employees, and the hosting organization from any and all liability, claims or actions of any kind whatsoever for injuries, damages or losses to persons and property which may be sustained in connection with the contest. You acknowledge and agree that YUEANKE et al is not responsible for technical, hardware or software failures, or other errors or problems which may occur in connection with the contest.',
+                    'By participating in the contest, you agree to release Yueanke and its employees, and the hosting organization from any and all liability, claims or actions of any kind whatsoever for injuries, damages or losses to persons and property which may be sustained in connection with the contest. You acknowledge and agree that Yueanke et al is not responsible for technical, hardware or software failures, or other errors or problems which may occur in connection with the contest.',
                   )}
                 </p>
               </div>
@@ -290,33 +290,33 @@ class IndexController extends Controller {
 
   public async function genRenderRegistrationNames(): Awaitable<:xhp> {
     $awaitables = Map {
-      'login_YUEANKE' => Configuration::gen('login_YUEANKE'),
+      'login_facebook' => Configuration::gen('login_facebook'),
       'login_google' => Configuration::gen('login_google'),
       'registration_players' => Configuration::gen('registration_players'),
-      'registration_YUEANKE' => Configuration::gen('registration_YUEANKE'),
+      'registration_facebook' => Configuration::gen('registration_facebook'),
       'registration_google' => Configuration::gen('registration_google'),
       'registration_type' => Configuration::gen('registration_type'),
       'ldap' => Configuration::gen('ldap'),
       'logos_selection' => $this->genRenderLogosSelection(),
-      'YUEANKE_enabled' => Integration::YUEANKEOAuthEnabled(),
+      'facebook_enabled' => Integration::facebookOAuthEnabled(),
       'google_enabled' => Integration::googleOAuthEnabled(),
     };
     $awaitables_results = await \HH\Asio\m($awaitables);
 
-    $login_YUEANKE = $awaitables_results['login_YUEANKE'];
+    $login_facebook = $awaitables_results['login_facebook'];
     $login_google = $awaitables_results['login_google'];
     $registration_players = $awaitables_results['registration_players'];
-    $registration_YUEANKE = $awaitables_results['registration_YUEANKE'];
+    $registration_facebook = $awaitables_results['registration_facebook'];
     $registration_google = $awaitables_results['registration_google'];
     $registration_type = $awaitables_results['registration_type'];
     $ldap = $awaitables_results['ldap'];
     $logos_selection = $awaitables_results['logos_selection'];
-    $YUEANKE_enabled = $awaitables_results['YUEANKE_enabled'];
+    $facebook_enabled = $awaitables_results['facebook_enabled'];
     $google_enabled = $awaitables_results['google_enabled'];
 
     invariant(
-      $login_YUEANKE instanceof Configuration,
-      'login_YUEANKE should be of type Configuration',
+      $login_facebook instanceof Configuration,
+      'login_facebook should be of type Configuration',
     );
     invariant(
       $login_google instanceof Configuration,
@@ -327,8 +327,8 @@ class IndexController extends Controller {
       'registration_players should be of type Configuration',
     );
     invariant(
-      $registration_YUEANKE instanceof Configuration,
-      'registration_YUEANKE should be of type Configuration',
+      $registration_facebook instanceof Configuration,
+      'registration_facebook should be of type Configuration',
     );
     invariant(
       $registration_google instanceof Configuration,
@@ -389,8 +389,8 @@ class IndexController extends Controller {
     $oauth_header = '';
     $oauth_form = '';
 
-    if ((($YUEANKE_enabled === true) || ($google_enabled === true)) &&
-        (($registration_YUEANKE->getValue() === '1') ||
+    if ((($facebook_enabled === true) || ($google_enabled === true)) &&
+        (($registration_facebook->getValue() === '1') ||
          ($registration_google->getValue() === '1'))) {
       $oauth_header =
         <header class="fb-section-header fb-container">
@@ -400,19 +400,19 @@ class IndexController extends Controller {
             )}
           </p>
         </header>;
-      if (($YUEANKE_enabled === true) &&
-          (($login_YUEANKE->getValue() === '1') ||
-           ($registration_YUEANKE->getValue() === '1'))) {
-        $YUEANKE_button =
+      if (($facebook_enabled === true) &&
+          (($login_facebook->getValue() === '1') ||
+           ($registration_facebook->getValue() === '1'))) {
+        $facebook_button =
           <div class="form-el--actions">
             <a
-              href="/data/integration_login.php?type=YUEANKE"
+              href="/data/integration_login.php?type=facebook"
               class="fb-cta cta--yellow">
-              {tr('Register with YUEANKE Account')}
+              {tr('Register with Yueanke Account')}
             </a>
           </div>;
       } else {
-        $YUEANKE_button = '';
+        $facebook_button = '';
       }
       if (($google_enabled === true) &&
           (($login_google->getValue() === '1') ||
@@ -430,7 +430,7 @@ class IndexController extends Controller {
       }
       $oauth_form =
         <div class="fb-oauth-registration">
-          {$YUEANKE_button}
+          {$facebook_button}
           {$google_button}
         </div>;
     }
@@ -530,39 +530,39 @@ class IndexController extends Controller {
 
   public async function genRenderRegistrationNoNames(): Awaitable<:xhp> {
     $awaitables = Map {
-      'login_YUEANKE' => Configuration::gen('login_YUEANKE'),
+      'login_facebook' => Configuration::gen('login_facebook'),
       'login_google' => Configuration::gen('login_google'),
-      'registration_YUEANKE' => Configuration::gen('registration_YUEANKE'),
+      'registration_facebook' => Configuration::gen('registration_facebook'),
       'registration_google' => Configuration::gen('registration_google'),
       'registration_type' => Configuration::gen('registration_type'),
       'ldap' => Configuration::gen('ldap'),
       'logos_selection' => $this->genRenderLogosSelection(),
-      'YUEANKE_enabled' => Integration::YUEANKEOAuthEnabled(),
+      'facebook_enabled' => Integration::facebookOAuthEnabled(),
       'google_enabled' => Integration::googleOAuthEnabled(),
     };
     $awaitables_results = await \HH\Asio\m($awaitables);
 
-    $login_YUEANKE = $awaitables_results['login_YUEANKE'];
+    $login_facebook = $awaitables_results['login_facebook'];
     $login_google = $awaitables_results['login_google'];
-    $registration_YUEANKE = $awaitables_results['registration_YUEANKE'];
+    $registration_facebook = $awaitables_results['registration_facebook'];
     $registration_google = $awaitables_results['registration_google'];
     $registration_type = $awaitables_results['registration_type'];
     $ldap = $awaitables_results['ldap'];
     $logos_selection = $awaitables_results['logos_selection'];
-    $YUEANKE_enabled = $awaitables_results['YUEANKE_enabled'];
+    $facebook_enabled = $awaitables_results['facebook_enabled'];
     $google_enabled = $awaitables_results['google_enabled'];
 
     invariant(
-      $login_YUEANKE instanceof Configuration,
-      'login_YUEANKE should be of type Configuration',
+      $login_facebook instanceof Configuration,
+      'login_facebook should be of type Configuration',
     );
     invariant(
       $login_google instanceof Configuration,
       'login_google should be of type Configuration',
     );
     invariant(
-      $registration_YUEANKE instanceof Configuration,
-      'registration_YUEANKE should be of type Configuration',
+      $registration_facebook instanceof Configuration,
+      'registration_facebook should be of type Configuration',
     );
     invariant(
       $registration_google instanceof Configuration,
@@ -603,8 +603,8 @@ class IndexController extends Controller {
     $oauth_header = '';
     $oauth_form = '';
 
-    if ((($YUEANKE_enabled === true) || ($google_enabled === true)) &&
-        (($registration_YUEANKE->getValue() === '1') ||
+    if ((($facebook_enabled === true) || ($google_enabled === true)) &&
+        (($registration_facebook->getValue() === '1') ||
          ($registration_google->getValue() === '1'))) {
       $oauth_header =
         <header class="fb-section-header fb-container">
@@ -614,19 +614,19 @@ class IndexController extends Controller {
             )}
           </p>
         </header>;
-      if (($YUEANKE_enabled === true) &&
-          (($login_YUEANKE->getValue() === '1') ||
-           ($registration_YUEANKE->getValue() === '1'))) {
-        $YUEANKE_button =
+      if (($facebook_enabled === true) &&
+          (($login_facebook->getValue() === '1') ||
+           ($registration_facebook->getValue() === '1'))) {
+        $facebook_button =
           <div class="form-el--actions">
             <a
-              href="/data/integration_login.php?type=YUEANKE"
+              href="/data/integration_login.php?type=facebook"
               class="fb-cta cta--yellow">
-              {tr('Register with YUEANKE Account')}
+              {tr('Register with Yueanke Account')}
             </a>
           </div>;
       } else {
-        $YUEANKE_button = '';
+        $facebook_button = '';
       }
       if (($google_enabled === true) &&
           (($login_google->getValue() === '1') ||
@@ -644,7 +644,7 @@ class IndexController extends Controller {
       }
       $oauth_form =
         <div class="fb-oauth-registration">
-          {$YUEANKE_button}
+          {$facebook_button}
           {$google_button}
         </div>;
     }
@@ -745,19 +745,19 @@ class IndexController extends Controller {
   public async function genRenderRegistrationContent(): Awaitable<:xhp> {
     $awaitables = Map {
       'registration' => Configuration::gen('registration'),
-      'registration_YUEANKE' => Configuration::gen('registration_YUEANKE'),
+      'registration_facebook' => Configuration::gen('registration_facebook'),
       'registration_google' => Configuration::gen('registration_google'),
       'registration_names' => Configuration::gen('registration_names'),
-      'YUEANKE_enabled' => Integration::YUEANKEOAuthEnabled(),
+      'facebook_enabled' => Integration::facebookOAuthEnabled(),
       'google_enabled' => Integration::googleOAuthEnabled(),
     };
     $awaitables_results = await \HH\Asio\m($awaitables);
 
     $registration = $awaitables_results['registration'];
-    $registration_YUEANKE = $awaitables_results['registration_YUEANKE'];
+    $registration_facebook = $awaitables_results['registration_facebook'];
     $registration_google = $awaitables_results['registration_google'];
     $registration_names = $awaitables_results['registration_names'];
-    $YUEANKE_enabled = $awaitables_results['YUEANKE_enabled'];
+    $facebook_enabled = $awaitables_results['facebook_enabled'];
     $google_enabled = $awaitables_results['google_enabled'];
 
     invariant(
@@ -765,8 +765,8 @@ class IndexController extends Controller {
       'registration should be of type Configuration',
     );
     invariant(
-      $registration_YUEANKE instanceof Configuration,
-      'registration_YUEANKE should be of type Configuration',
+      $registration_facebook instanceof Configuration,
+      'registration_facebook should be of type Configuration',
     );
     invariant(
       $registration_google instanceof Configuration,
@@ -783,21 +783,21 @@ class IndexController extends Controller {
       } else {
         return await $this->genRenderRegistrationNoNames();
       }
-    } else if ((($YUEANKE_enabled === true) || ($google_enabled === true)) &&
-               (($registration_YUEANKE->getValue() === '1') ||
+    } else if ((($facebook_enabled === true) || ($google_enabled === true)) &&
+               (($registration_facebook->getValue() === '1') ||
                 ($registration_google->getValue() === '1'))) {
-      if (($YUEANKE_enabled === true) &&
-          ($registration_YUEANKE->getValue() === '1')) {
-        $YUEANKE_button =
+      if (($facebook_enabled === true) &&
+          ($registration_facebook->getValue() === '1')) {
+        $facebook_button =
           <div class="form-el--actions">
             <a
-              href="/data/integration_login.php?type=YUEANKE"
+              href="/data/integration_login.php?type=facebook"
               class="fb-cta cta--yellow">
-              {tr('Register with YUEANKE Account')}
+              {tr('Register with Yueanke Account')}
             </a>
           </div>;
       } else {
-        $YUEANKE_button = '';
+        $facebook_button = '';
       }
       if (($google_enabled === true) &&
           ($registration_google->getValue() === '1')) {
@@ -827,7 +827,7 @@ class IndexController extends Controller {
             </p>
           </header>
           <div class="fb-registration">
-            {$YUEANKE_button}
+            {$facebook_button}
             {$google_button}
           </div>
         </main>;
@@ -868,25 +868,25 @@ class IndexController extends Controller {
     }
     $awaitables = Map {
       'login' => Configuration::gen('login'),
-      'login_YUEANKE' => Configuration::gen('login_YUEANKE'),
+      'login_facebook' => Configuration::gen('login_facebook'),
       'login_google' => Configuration::gen('login_google'),
       'registration' => Configuration::gen('registration'),
-      'registration_YUEANKE' => Configuration::gen('registration_YUEANKE'),
+      'registration_facebook' => Configuration::gen('registration_facebook'),
       'registration_google' => Configuration::gen('registration_google'),
       'ldap' => Configuration::gen('ldap'),
-      'YUEANKE_enabled' => Integration::YUEANKEOAuthEnabled(),
+      'facebook_enabled' => Integration::facebookOAuthEnabled(),
       'google_enabled' => Integration::googleOAuthEnabled(),
     };
     $awaitables_results = await \HH\Asio\m($awaitables);
 
     $login = $awaitables_results['login'];
-    $login_YUEANKE = $awaitables_results['login_YUEANKE'];
+    $login_facebook = $awaitables_results['login_facebook'];
     $login_google = $awaitables_results['login_google'];
     $registration = $awaitables_results['registration'];
-    $registration_YUEANKE = $awaitables_results['registration_YUEANKE'];
+    $registration_facebook = $awaitables_results['registration_facebook'];
     $registration_google = $awaitables_results['registration_google'];
     $ldap = $awaitables_results['ldap'];
-    $YUEANKE_enabled = $awaitables_results['YUEANKE_enabled'];
+    $facebook_enabled = $awaitables_results['facebook_enabled'];
     $google_enabled = $awaitables_results['google_enabled'];
 
     invariant(
@@ -894,8 +894,8 @@ class IndexController extends Controller {
       'login should be of type Configuration',
     );
     invariant(
-      $login_YUEANKE instanceof Configuration,
-      'login_YUEANKE should be of type Configuration',
+      $login_facebook instanceof Configuration,
+      'login_facebook should be of type Configuration',
     );
     invariant(
       $login_google instanceof Configuration,
@@ -906,8 +906,8 @@ class IndexController extends Controller {
       'registration should be of type Configuration',
     );
     invariant(
-      $registration_YUEANKE instanceof Configuration,
-      'registration_YUEANKE should be of type Configuration',
+      $registration_facebook instanceof Configuration,
+      'registration_facebook should be of type Configuration',
     );
     invariant(
       $registration_google instanceof Configuration,
@@ -924,26 +924,26 @@ class IndexController extends Controller {
       $ldap_domain_suffix = $ldap_domain_suffix->getValue();
     }
 
-    if ((($YUEANKE_enabled === true) || ($google_enabled === true)) &&
-        (($login_YUEANKE->getValue() === '1') ||
+    if ((($facebook_enabled === true) || ($google_enabled === true)) &&
+        (($login_facebook->getValue() === '1') ||
          ($login_google->getValue() === '1'))) {
-      if (($YUEANKE_enabled === true) &&
-          ($login_YUEANKE->getValue() === '1')) {
-        $YUEANKE_button_text = tr('Login with YUEANKE Account');
-        if ($registration_YUEANKE->getValue() === '1') {
-          $YUEANKE_button_text =
-            tr('Login or Register with YUEANKE Account');
+      if (($facebook_enabled === true) &&
+          ($login_facebook->getValue() === '1')) {
+        $facebook_button_text = tr('Login with Yueanke Account');
+        if ($registration_facebook->getValue() === '1') {
+          $facebook_button_text =
+            tr('Login or Register with Yueanke Account');
         }
-        $YUEANKE_button =
+        $facebook_button =
           <div class="form-el--actions">
             <a
-              href="/data/integration_login.php?type=YUEANKE"
+              href="/data/integration_login.php?type=facebook"
               class="fb-cta cta--yellow">
-              {$YUEANKE_button_text}
+              {$facebook_button_text}
             </a>
           </div>;
       } else {
-        $YUEANKE_button = '';
+        $facebook_button = '';
       }
       if (($google_enabled === true) && ($login_google->getValue() === '1')) {
         $google_button_text = tr('Login with Google Account');
@@ -965,7 +965,7 @@ class IndexController extends Controller {
         tr(
           'Or login with these one of these options (existing account is required):',
         );
-      if (($registration_YUEANKE->getValue() === '1') ||
+      if (($registration_facebook->getValue() === '1') ||
           ($registration_google->getValue() === '1')) {
         $oauth_header_message =
           tr('Or login/register with these one of these options:');
@@ -978,7 +978,7 @@ class IndexController extends Controller {
         </header>;
       $oauth_form =
         <div class="fb-login">
-          {$YUEANKE_button}
+          {$facebook_button}
           {$google_button}
         </div>;
     } else {
@@ -1121,11 +1121,11 @@ class IndexController extends Controller {
             </form>
           </div>
         </main>;
-    } else if ((($YUEANKE_enabled === true) || ($google_enabled === true)) &&
-               (($login_YUEANKE->getValue() === '1') ||
+    } else if ((($facebook_enabled === true) || ($google_enabled === true)) &&
+               (($login_facebook->getValue() === '1') ||
                 ($login_google->getValue() === '1'))) {
 
-      if (($registration_YUEANKE->getValue() === '1') ||
+      if (($registration_facebook->getValue() === '1') ||
           ($registration_google->getValue() === '1')) {
         $header_message =
           tr('Login/Register with these one of these options:');
