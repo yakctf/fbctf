@@ -244,7 +244,7 @@ INSERT INTO `configuration` (field, value, description) VALUES("registration", "
 INSERT INTO `configuration` (field, value, description) VALUES("registration_names", "0", "(Boolean) Registration will ask for names");
 INSERT INTO `configuration` (field, value, description) VALUES("registration_type", "1", "(Integer) Type of registration: 1 - Open; 2 - Tokenized;");
 INSERT INTO `configuration` (field, value, description) VALUES("registration_players", "3", "(Integer) Number of players per team");
-INSERT INTO `configuration` (field, value, description) VALUES("registration_facebook", "0", "(Boolean) Allow Facebook Registration");
+INSERT INTO `configuration` (field, value, description) VALUES("registration_facebook", "0", "(Boolean) Allow Yueanke Registration");
 INSERT INTO `configuration` (field, value, description) VALUES("registration_google", "0", "(Boolean) Allow Google Registration");
 INSERT INTO `configuration` (field, value, description) VALUES("registration_prefix", "Hacker", "(String) Automated Team Registation Name Prefix");
 INSERT INTO `configuration` (field, value, description) VALUES("ldap", "0", "(Boolean) Ability to use LDAP to login");
@@ -254,7 +254,7 @@ INSERT INTO `configuration` (field, value, description) VALUES("ldap_domain_suff
 INSERT INTO `configuration` (field, value, description) VALUES("login", "1", "(Boolean) Ability to login");
 INSERT INTO `configuration` (field, value, description) VALUES("login_select", "0", "(Boolean) Login selecting the team");
 INSERT INTO `configuration` (field, value, description) VALUES("login_strongpasswords", "0", "(Boolean) Enforce using strong passwords");
-INSERT INTO `configuration` (field, value, description) VALUES("login_facebook", "0", "(Boolean) Allow Facebook Login");
+INSERT INTO `configuration` (field, value, description) VALUES("login_facebook", "0", "(Boolean) Allow Yueanke Login");
 INSERT INTO `configuration` (field, value, description) VALUES("login_google", "0", "(Boolean) Allow Google Login");
 INSERT INTO `configuration` (field, value, description) VALUES("password_type", "1", "(Integer) Type of passwords: See table password_types");
 INSERT INTO `configuration` (field, value, description) VALUES("default_bonus", "30", "(Integer) Default value for bonus in levels");
@@ -263,8 +263,8 @@ INSERT INTO `configuration` (field, value, description) VALUES("language", "en",
 INSERT INTO `configuration` (field, value, description) VALUES("livesync", "0", "(Boolean) LiveSync functionality");
 INSERT INTO `configuration` (field, value, description) VALUES("livesync_auth_key", "", "(String) Optional LiveSync Auth Key");
 INSERT INTO `configuration` (field, value, description) VALUES("custom_logo", "0", "(Boolean) Custom branding logo");
-INSERT INTO `configuration` (field, value, description) VALUES("custom_org", "Facebook", "(String) Custom branding organization text");
-INSERT INTO `configuration` (field, value, description) VALUES("custom_byline", "Powered By Facebook", "(String) Custom branding byline text");
+INSERT INTO `configuration` (field, value, description) VALUES("custom_org", "Yueanke", "(String) Custom branding organization text");
+INSERT INTO `configuration` (field, value, description) VALUES("custom_byline", "Powered By Yueanke", "(String) Custom branding byline text");
 INSERT INTO `configuration` (field, value, description) VALUES("custom_logo_image", "static/img/favicon.png", "(String) Custom logo image file");
 UNLOCK TABLES;
 
