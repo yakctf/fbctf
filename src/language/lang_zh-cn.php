@@ -69,7 +69,7 @@ $translations = array(
   'If you have any questions about what is or is not allowed, please ask an organizer.' =>
     '如果您对上述问题有疑虑，请立即向托管组织反映。',
   'Have fun!' =>
-    '玩得愉快！',
+    '比赛第一，友谊第二！',
   'Name' =>
     '姓名',
   'Email' =>
