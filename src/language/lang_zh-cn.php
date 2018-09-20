@@ -87,13 +87,13 @@ $translations = array(
   'or upload your own' =>
     '或上传自己的',
   'Clear your custom emblem to use a default emblem.' =>
-    '清除您的自定义会徽以使用默认会徽。',
+    '清除你的自定义会徽以使用默认会徽。',
   'Password is too simple' =>
     '密码太简单了',
   'Sign Up' =>
     '注册',
   'Register to play Capture The Flag here. Once you have registered, you will be logged in.' =>
-    '注册以进行夺旗赛。注册完毕时，会将您自动登入。',
+    '注册以进行夺旗赛。注册完毕时，会将你自动登入。',
   'Not Available' =>
     '服务不可用',
   'Team Registration will be open soon, stay tuned!' =>
@@ -105,7 +105,7 @@ $translations = array(
   'Team Login' =>
     '队伍登入',
   'Please login here. If you have not registered, you may do so by clicking "Sign Up" below. ' =>
-    '请登入。如果您尚未注册，请点击下方的 "注册" 。',
+    '请登入。如果你尚未注册，请点击下方的 "注册" 。',
   'Team Login will be open soon, stay tuned!' =>
     '队伍登入即将开放，请静候佳音。',
   'ERROR' =>
@@ -142,7 +142,7 @@ $translations = array(
   'Scoreboard' =>
     '记分板',
   'You' =>
-    '您',
+    '我',
   'Others' =>
     '其他',
   'All' =>
@@ -221,7 +221,7 @@ $translations = array(
   'Default Bonus' =>
     '预设红利',
   'Bases Cycle (s)' =>
-    '基地佔领计分更新频率 (秒)',
+    '基地占领计分更新频率 (秒)',
   'Default Bonus Dec' =>
     '预设红利损耗',
   'Timer' =>
@@ -261,25 +261,25 @@ $translations = array(
   'Back Up Database' =>
     '资料库备份',
   'Export Full Game' =>
-    '汇出游戏进度',
+    '导出游戏进度',
   'Import Full Game' =>
-    '汇入游戏进度',
+    '导入游戏进度',
   'Import Teams' =>
-    '汇入队伍资讯',
+    '导入队伍资讯',
   'Export Teams' =>
-    '汇出队伍资讯',
+    '导出队伍资讯',
   'Import Logos' =>
-    '汇入所有标志',
+    '导入所有标志',
   'Export Logos' =>
-    '汇出所有标志',
+    '导出所有标志',
   'Import Levels' =>
-    '汇入所有关卡',
+    '导入所有关卡',
   'Export Levels' =>
-    '汇出所有关卡',
+    '导出所有关卡',
   'Import Categories' =>
-    '汇入所有类别',
+    '导入所有类别',
   'Export Categories' =>
-    '汇出所有类别',
+    '导出所有类别',
   'Levels' =>
     '关卡',
   'New Quiz Level' =>
@@ -329,7 +329,7 @@ $translations = array(
   'Add Quiz Level' =>
     '增加测验型关卡',
   'New Flag Level' =>
-    '新增 Flag 型关卡',
+    '新增旗标型关卡',
   'Description' =>
     '叙述',
   'Level description' =>
@@ -506,7 +506,7 @@ $translations = array(
   'Completed' =>
     '已完成',
   'Remaining' =>
-    '剩馀',
+    '剩余',
   'Start' =>
     '开始',
   'End' =>
@@ -516,13 +516,13 @@ $translations = array(
   'pts' =>
     '得分', //points
   'Your Rank' =>
-    '您的排名',
+    '你的排名',
   'Your Score' =>
-    '您的分数',
+    '你的分数',
   'Everyone' =>
     '每个人',
   'Your Team' =>
-    '您的队伍',
+    '你的队伍',
   'Captured' =>
     '夺得',
   'Initiating' =>
@@ -556,13 +556,13 @@ $translations = array(
   'begin_' =>
     '开始_',
   'Are you sure you want to kick off the game? Logs will be cleared and progressive scoreboard will start' =>
-    '您确定要开始游戏了吗？记录将会被清空且记分板将会开始记录。',
+    '你确定要开始游戏了吗？记录将会被清空且记分板将会开始记录。',
   'end_' =>
     '结束_',
   'Are you sure you want to finish the current game?' =>
-    '您确定要立即结束现在的游戏？',
+    '你确定要立即结束现在的游戏？',
   'Are you sure you want to logout from the game?' =>
-    '您确定要立即登出？',
+    '你确定要立即登出？',
   'Saved' =>
     '已储存',
   'All changes have been successfully saved.' =>
@@ -570,11 +570,11 @@ $translations = array(
   'Error' =>
     '错误',
   'Sorry your form was not saved. Please correct the all errors and save again.' =>
-    '很抱歉我们无法储存您的表单。请修正所有错误并再次尝试。',
+    '很抱歉我们无法储存你的表单。请修正所有错误并再次尝试。',
   'cancel_' =>
     '取消_',
   'Are you sure you want to cancel? You have unsaved changes that will be reverted.' =>
-    '您确定要取消？未储存的变更将会回复至上次的状态。',
+    '你确定要取消？未储存的变更将会回复至上次的状态。',
   'choose_logo' =>
     '选择标志',
   'captured_' =>
@@ -590,7 +590,7 @@ $translations = array(
   'capture_' =>
     '夺取_',
   'Insert your answer' =>
-    '输入您的答案',
+    '输入你的答案',
   'Request Hint' =>
     '要求提示',
   'Submit' =>
@@ -640,7 +640,7 @@ $translations = array(
   'Countries marked with an ' =>
     '有着',
   'are captured by you.' =>
-    '符号代表您夺得的国家。',
+    '符号代表你夺得的国家。',
   ' are owned by others.' =>
     '符号代表被其他人占有的国家。',
   'Captures' =>
@@ -658,7 +658,7 @@ $translations = array(
   'Click "Nav" to access main navigation links like Rules of Play, Registration, Blog, Jobs & more.' =>
     '点击 "导航" 以获取更多资讯，例如： 游戏规则、注册、博客、工作或更多。',
   'Track your competition by clicking "scoreboard" to access real-time game statistics and graphs.' =>
-    '点击 "记分板" 以追踪您目前游戏的进度，并查看即时的统计资料与图形。',
+    '点击 "记分板" 以追踪你目前游戏的进度，并查看即时的统计资料与图形。',
   'Have fun, be the best and conquer the world.' =>
     '成为最棒的征服者吧，祝愉快。',
   'Game_On' =>
@@ -670,9 +670,9 @@ $translations = array(
   'Skip to play' =>
     '跳过教学',
   'Powered By Yueanke' =>
-    'Powered By Yueanke',
+    '月安客基于脸书开源项目驱动',
   'Active Directory / LDAP' =>
-    'Active Directory / LDAP',
+    '活动目录 / LDAP',
   'LDAP Server' =>
     'LDAP 服务器',
   'LDAP Port' =>
