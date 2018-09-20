@@ -139,6 +139,18 @@ $translations = array(
     '观看模式',
   'Tutorial' =>
     '教学',
+  'Account' =>
+    '账户',
+  'account_' =>
+    '账户',
+  'Change your team name.' =>
+    '修改你团队的名称',
+  'Update' =>
+    '更新',
+  'Setup your FBCTF Live Sync credentials. These credentials must be the SAME on all other FBCTF instances that you are linking. DO NOT use your account password.' =>
+    '设置你的 FBCTF Live Sync 凭证，请不要使用你的账号密码。',
+  'Settings' =>
+    '设置',
   'Scoreboard' =>
     '记分板',
   'You' =>
@@ -172,6 +184,16 @@ $translations = array(
     '整合',
   'Game Schedule' =>
     '比赛时间表',
+  'Game Start Year' =>
+    '比赛开始时间 年',
+  'Game End Year' =>
+    '比赛结束时间 年',
+  'Month' =>
+    '月',
+  'Day' =>
+    '日',
+  'Minute' =>
+    '分',
   'Hour' =>
     '小时',
   'Hours' =>
@@ -223,11 +245,11 @@ $translations = array(
   'Refresh Gameboard' =>
     '记分板重整',
   'Default Bonus' =>
-    '预设红利',
+    '预设得分',
   'Bases Cycle (s)' =>
     '基地占领计分更新频率 (秒)',
   'Default Bonus Dec' =>
-    '预设红利损耗',
+    '预设得分损耗',
   'Timer' =>
     '计时器',
   'Server Time' =>
@@ -323,9 +345,9 @@ $translations = array(
   'Show Answer' =>
     '显示答案',
   'Bonus' =>
-    '红利',
+    '得分',
   '-Dec' =>
-    '-Dec',
+    '-损耗',
   'Save' =>
     '储存',
   'Quiz Management' =>
@@ -598,7 +620,9 @@ $translations = array(
   'Request Hint' =>
     '要求提示',
   'Submit' =>
-    '送出',
+    '提交',
+  'Close' =>
+    '关闭',
   'hint_' =>
     '提示_',
   'first_capture' =>
